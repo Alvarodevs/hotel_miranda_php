@@ -1,9 +1,9 @@
 <?php
-include "bladeOne/BladeOne.php";
+include "../bladeOne/BladeOne.php";
 use eftec\bladeone;
 
-$views = __DIR__ . '/views';
-$compiledFolder = __DIR__ . '/compiled';
+$views = '../views';
+$compiledFolder = '../compiled';
 $blade = new bladeone\BladeOne($views, $compiledFolder);
 
-echo $blade->run("about", ["name" => "hello"]);
+echo $blade->run("index");
