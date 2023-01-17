@@ -1,8 +1,8 @@
 <?php $_shouldextend[1]=1; ?>
 
-<?php $this->startSection('header'); ?>
+<?php /* <?php $this->startSection('header'); ?>
 @parentXYZABC
-<?php $this->stopSection(); ?>
+<?php $this->stopSection(); ?> */ ?>
 
 <?php $this->startSection('content'); ?>
 	<!-- UPPER SECTION -->

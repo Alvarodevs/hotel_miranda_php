@@ -1,8 +1,5 @@
 @extends('layout')
 
-@section('header')
-@parent
-@endsection
 
 @section('content')
 	<!-- UPPER SECTION -->

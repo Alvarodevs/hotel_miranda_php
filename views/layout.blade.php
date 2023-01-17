@@ -49,10 +49,10 @@
 						<!-- Nav for desktop -->
 						<div class="nav__menu__links__desktop">
 							<ul class="navbar__nav__list navbar__nav__list--desktop">
-								<li class="navbar__nav__list__link"><a href="./about_us.html">About</a></li>
-								<li class="navbar__nav__list__link"><a href="./rooms_grid.html">Rooms</a></li>
-								<li class="navbar__nav__list__link"><a href="./offers.html">Offers</a></li>
-								<li class="navbar__nav__list__link"><a href="./contact.html">Contact</a></li>
+								<li class="navbar__nav__list__link"><a href="./about.php">About</a></li>
+								<li class="navbar__nav__list__link"><a href="./rooms_grid.php">Rooms</a></li>
+								<li class="navbar__nav__list__link"><a href="./offers.php">Offers</a></li>
+								<li class="navbar__nav__list__link"><a href="./contact.php">Contact</a></li>
 							</ul>
 						</div>
 						<!-- Nav for desktop -->
