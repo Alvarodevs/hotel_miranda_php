@@ -2,26 +2,31 @@
 <html lang="en">
 
 <?php $this->startSection('head'); ?>
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Hotel Miranda</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-	<link rel="stylesheet" href="../styles/styles.css" />
-</head>
 
-<body>
+ <head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Hotel Miranda</title>
+ <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+ <link rel="stylesheet" href="../styles/styles.css" />
+ <?php echo $this->yieldContent('head'); ?>
 
-	<?php $this->startSection('header'); ?>
-	<header class="header__container">
+ </head>
+
+ <body>
+
+ <?php $this->startSection('header'); ?>
+ <header class="header__container">
  <div class="header__container__content">
  <p class="header__container__content__text">We Make Your Feel Comfortable</p>
  <div class="navbar__container">
  <div class="nav__links">
  <div class="burger-icon ">
  <img class="burger-icon--open" src="../assets/icons/mobile_view/menu_burger.svg" alt="Menu">
- <img class="burger-icon--close hidden" src="../assets/icons/mobile_view/close_btn.svg" alt="Close">
+ <img class="burger-icon--close hidden" src="../assets/icons/mobile_view/close_btn.svg"
+ alt="Close">
  </div>
 
  <!-- Nav for mobile -->
@@ -69,13 +74,13 @@
  </div>
  </div>
  </div>
-	</header>
+ </header>
 
-	<?php $this->startSection('content'); ?>
-	<?php echo $this->yieldSection(); ?>
+ <?php $this->startSection('content'); ?>
+ <?php echo $this->yieldSection(); ?>
 
-	<?php $this->startSection('footer'); ?>
-	<footer class="footer">
+ <?php $this->startSection('footer'); ?>
+ <footer class="footer">
  <div class="footer__content" style="background-image: url(./assets/images/footer-background.svg)">
 
  <div class="footer__description">
@@ -175,18 +180,27 @@
  <div class="footer__copyright__links">
  <a class="footer__copyright__text footer__copyright__link" href="#">Terms of use</a>
  <p class="footer__copyright__text">|</p>
- <a class="footer__copyright__text footer__copyright__link" href="#">Privacy Environmental Policy</a>
+ <a class="footer__copyright__text footer__copyright__link" href="#">Privacy Environmental
+ Policy</a>
  </div>
  </div>
-	</footer>
+ </footer>
 
-	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-	<script type="module" src="../js-scripts/index.js"></script>
-	<script type="module" src="../js-scripts/swiper.js"></script>
-	<script type="module" src="../js-scripts/swiperFacilities.js"></script>
-	<script type="module" src="../js-scripts/swiperMenu.js"></script>
-	<script type="module" src="../js-scripts/swiperMenuImages.js"></script>
+
+ <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+ <script type="module" src="../js-scripts/index.js"></script>
+
+
+ <script type="module" src="../js-scripts/swiper.js"></script>
+ <script type="module" src="../js-scripts/swiperCounter.js"></script>
+ <script type="module" src="../js-scripts/swiperFacilities.js"></script>
+ <script type="module" src="../js-scripts/swiperMenu.js"></script>
+ <script type="module" src="../js-scripts/swiperMenuImages.js"></script>
+ <script type="module" src="../js-scripts/swiperRoomList.js"></script>
+
+ <?php $this->startSection('scripts'); ?>
+ <?php echo $this->yieldSection(); ?>
+
 </body>
-
 
 </html>

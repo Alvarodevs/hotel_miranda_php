@@ -1,8 +1,12 @@
 <?php $_shouldextend[1]=1; ?>
 
+<?php $this->startSection('head'); ?>
+ <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+<?php $this->stopSection(); ?>
+
 <?php $this->startSection('content'); ?>
-<!-- UPPER SECTION -->
-	<section class="upper-section">
+ <!-- UPPER SECTION -->
+ <section class="upper-section">
  <div class="upper-section__content">
  <p class="upper-section__title">
  The ultimate luxury experience
@@ -17,10 +21,10 @@
  <a class="upper-section__links--about" href="./room_details.html">Blog</a>
  </div>
  </div>
-	</section>
+ </section>
 
-	<!-- CONTACT INFO -->
-	<section class="contact">
+ <!-- CONTACT INFO -->
+ <section class="contact">
  <div class="contact_info_container">
  <div class="card">
  <div class="info-container">
@@ -59,10 +63,10 @@
  </div>
  </div>
 
-	</section>
+ </section>
 
-	<!-- MAP -->
-	<section class="map-section">
+ <!-- MAP -->
+ <section class="map-section">
  <div id="map"></div>
  <div class="map-section-inputs">
  <div class="map-section-inputs-address">
@@ -78,9 +82,9 @@
  </div>
  </div>
  <div id="distances"></div>
-	</section>
-	<!-- FORM -->
-	<form class="contact_form">
+ </section>
+ <!-- FORM -->
+ <form class="contact_form">
  <div class="form">
  <div class="form_column">
  <div class="form__container__input">
@@ -113,7 +117,16 @@
  <div class="button__container">
  <button class="form__button" type="submit">SEND</button>
  </div>
-	</form>
+ </form>
+<?php $this->stopSection(); ?>
+
+<?php $this->startSection('scripts'); ?>
+ <script src="../js-scripts/utils/hotels.js"></script>
+ <script src="../js-scripts/utils/comunitiesBorders.js"></script>
+ <script src="../js-scripts/utils/regions.js"></script>
+ <script type="module" src="../js-scripts/maps.js"></script>
+ <script defer
+ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-DEPzG-iWOXK15xqXl19vNJUsqNtv0yA&callback=initMap"></script>
 <?php $this->stopSection(); ?>
 
 <?php if (isset($_shouldextend[1])) { echo $this->runChild('layout'); } ?>
