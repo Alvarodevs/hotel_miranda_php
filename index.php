@@ -1,8 +1,18 @@
 <?php
 include "packages/bladeOne/BladeOne.php";
+// include "db/dotenv_loader.php";
+include "db/connectionDb.php";
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 use eftec\bladeone;
 
 $views = './views';
 $compiledFolder = './compiled';
 $blade = new bladeone\BladeOne($views, $compiledFolder);
-echo $blade->run("index");
+
+$query = "SELECT * FROM rooms";
+$rooms = $conn->query($query);
+
+echo $blade->run("index", ['rooms' => $rooms->fetch_all()]);

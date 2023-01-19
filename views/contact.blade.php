@@ -120,12 +120,12 @@
     </form>
 @endsection
 
-<?php $apiKey = $_ENV['GOOGLE_API_KEY']; ?>
+<?php echo $googleApiKey; ?>
 
 @section('scripts')
     <script src="../js-scripts/utils/hotels.js"></script>
     <script src="../js-scripts/utils/comunitiesBorders.js"></script>
     <script src="../js-scripts/utils/regions.js"></script>
     <script type="module" src="../js-scripts/maps.js"></script>
-    <script defer src="https://maps.googleapis.com/maps/api/js?key={{ $apiKey }}&callback=initMap"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key={{ $googleApiKey }}&callback=initMap"></script>
 @endsection
