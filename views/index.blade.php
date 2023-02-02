@@ -1,7 +1,4 @@
 @extends('layout')
-<?php
-echo $rooms;
-?>
 
 @section('content')
     <!-- UPPER SECTION -->
@@ -77,6 +74,10 @@ echo $rooms;
         </div>
     </section>
 
+    @foreach ($rooms as $room)
+        <?php echo $room; ?>
+    @endforeach $rooms;
+
     <!-- ROOMS -->
     <section class="rooms">
         <p class="rooms__title rooms__title--small">ROOMS</p>
@@ -85,6 +86,35 @@ echo $rooms;
         <div class="swiper">
             <div class="swiper-wrapper">
                 <!-- Slides -->
+                <!-- @foreach ($rooms as $room)
+                <div class="swiper-slide">
+                    <div class="room-home">
+                        <div class="room-home__main-container">
+                            @if($room[7])
+                                <div class="room-home__bar">
+                                    @foreach (explode(',', $room[7]) as $item)
+                                        @if($item)
+                                        <img class="room-home__bar__icon" src="./assets/icons/rooms/{{$item}}.svg" alt="Bed"></img>
+                                        @endif
+                                    @endforeach
+                                </div>
+                            @endif    
+                            <div class="room-home__img" style="background-image: url('{{$room[9]}}')"></div>
+                        </div>
+                        <div class="room-home__info">
+                            <div class="room-home__info__text">
+                                <p class="room-home__info__text__title">{{$room[2]}}</p>
+                                <p class="room-home__info__text__description">{{$room[3]}}</p>
+                            </div>
+                            <div class="room-home__info__price">
+                                <span class="room-home__info__price__amount">{{$room[3]}}</span>
+                                <span class="room-home__info__price__night">/Night</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+
                 <div class="swiper-slide">
                     <div class="room-home">
                         <div class="room-home__main-container">

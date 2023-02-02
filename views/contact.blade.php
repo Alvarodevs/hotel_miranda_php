@@ -120,8 +120,6 @@
     </form>
 @endsection
 
-<?php echo $googleApiKey; ?>
-
 @section('scripts')
     <script src="../js-scripts/utils/hotels.js"></script>
     <script src="../js-scripts/utils/comunitiesBorders.js"></script>
