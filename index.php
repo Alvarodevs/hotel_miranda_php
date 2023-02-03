@@ -15,4 +15,4 @@ $blade = new bladeone\BladeOne($views, $compiledFolder);
 $query = "SELECT * FROM rooms LIMIT 3";
 $rooms = $conn->query($query);
 
-echo $blade->run("index", ['rooms' => $rooms->fetch_all()]);
+echo $blade->run("index", ['rooms' => $rooms->fetch_all(MYSQLI_ASSOC)]);
